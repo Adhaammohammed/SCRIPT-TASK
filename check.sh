@@ -1,17 +1,16 @@
-#!/bin/bash
+#!/bin/bash                                     
 
-# Function to check if an email is a valid FQDN
-function is_valid_email() {
+function is_valid_email() {                 # Function to check if an email is a valid or not
     local email=$1
-    if [[ $email =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
+    if [[ $email =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then       #REGEX For Email 
         return 0
     else
         return 1
     fi
 }
 
-# Function to determine if a number is odd or even
-function odd_or_even() {
+
+function odd_or_even() {                    # Function to determine if a number is Even or Odd
     local num=$1
     if (( num % 2 == 0 )); then
         echo "even"
