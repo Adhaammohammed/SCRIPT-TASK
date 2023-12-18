@@ -20,7 +20,7 @@ function odd_or_even() {                    # Function to determine if a number 
 }
 
 # Process the text file
-while read -r name email id; do
+while read name email id; do
     if [[ -n $id && $id =~ ^[0-9]+$ ]]; then
         if is_valid_email "$email"; then
             echo "The ID of $email is $(odd_or_even $id) number."
